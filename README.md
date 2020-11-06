@@ -63,3 +63,4 @@ On Windows, the compilation requires Microsoft Visual Studio to be in `PATH`. We
 ### styleGAN2 encoder https://github.com/rolux/stylegan2encoder
 ### styleGAN encoder https://github.com/Puzer/stylegan-encoder
 # GAN_inversion_video_colab
+# GAN_inversion_video_colab
