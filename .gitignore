@@ -1,0 +1,8 @@
+frame_image_data/
+results/
+latent_representations/
+generated_images/
+outputVideo/
+.stylegan2-cache/
+__pycache__/
+.vs/
