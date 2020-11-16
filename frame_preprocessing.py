@@ -1,7 +1,7 @@
 from PIL import Image
 import os
 import argparse
-import time
+
 
 def main():
     
@@ -25,8 +25,8 @@ def main():
         im_resized = im_cropped.resize(size, Image.ANTIALIAS)
         im_resized = im_cropped.resize(size, Image.ANTIALIAS)
         im_resized.save(str(args.frame_dir)+str(i.decode('utf-8')))
-        im_resized.close()
-        time.sleep(0.5)
+        
+        
 		#else:
 		#im_resized = im.resize(size, Image.ANTIALIAS)
 		#im_resized.save(str(args.frame_dir)+str(i.decode('utf-8')))
