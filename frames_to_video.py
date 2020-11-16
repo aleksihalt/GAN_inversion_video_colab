@@ -14,12 +14,13 @@ def main():
     args, other_args = parser.parse_known_args()
 
     ims=[]
-    print(100000+int(args.number_of_frames))
-    for i in range(100000,(100000+int(args.number_of_frames))):
+    for i in range(100000,(100000+int(args.number_of_frames)+1)):
         im = Image.open(str(args.frame_dir)+str(i)+r".png")
-        ims.append(im)
-        arr = np.array(ims) 
-    imageio.mimwrite(str(args.saved_video_file), arr , fps = 30)
+        ima = np.array(im)
+        ims.append(ima)
+        print(i)
+        im.close()
+    imageio.mimwrite(str(args.saved_video_file), ims , fps = 30)
 
 if __name__ == "__main__":
     main()
