@@ -15,7 +15,7 @@ def main():
 
     ims=[]
     print(100000+int(args.number_of_frames))
-    for i in range(100025,(100000+int(args.number_of_frames))):
+    for i in range(100000,(100000+int(args.number_of_frames))):
         im = Image.open(str(args.frame_dir)+str(i)+r".png")
         ims.append(im)
     imageio.mimwrite(str(args.saved_video_file), ims , fps = 30)
