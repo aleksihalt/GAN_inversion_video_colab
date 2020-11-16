@@ -18,7 +18,8 @@ def main():
     for i in range(100000,(100000+int(args.number_of_frames))):
         im = Image.open(str(args.frame_dir)+str(i)+r".png")
         ims.append(im)
-    imageio.mimwrite(str(args.saved_video_file), ims , fps = 30)
+        arr = np.array(ims) 
+    imageio.mimwrite(str(args.saved_video_file), arr , fps = 30)
 
 if __name__ == "__main__":
     main()
