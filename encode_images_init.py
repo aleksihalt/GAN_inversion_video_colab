@@ -21,7 +21,7 @@ def main():
     parser.add_argument('src_dir', help='Directory with images for encoding')
     parser.add_argument('generated_images_dir', help='Directory for storing generated images')
     parser.add_argument('dlatent_dir', help='Directory for storing dlatent representations')
-
+parser.add_argument('--iterations', default=1000, help='Number of optimization steps for each batch', type=int)
     parser.add_argument('--network_pkl', default='gdrive:networks/stylegan2-ffhq-config-f.pkl', help='Path to local copy of stylegan2-ffhq-config-f.pkl')
 
     # for now it's unclear if larger batch leads to better performance/quality
@@ -30,7 +30,7 @@ def main():
     # Perceptual model params
     parser.add_argument('--image_size', default=256, help='Size of images for perceptual model', type=int)
     parser.add_argument('--lr', default=1., help='Learning rate for perceptual model', type=float)
-    parser.add_argument('--iterations', default=1000, help='Number of optimization steps for each batch', type=int)
+    
 
     # Generator params
     parser.add_argument('--randomize_noise', default=False, help='Add noise to dlatents during optimization', type=bool)
