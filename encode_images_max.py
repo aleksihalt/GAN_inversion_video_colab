@@ -24,7 +24,7 @@ def main():
     parser.add_argument('dlatent_dir', help='Directory for storing dlatent representations')
     parser.add_argument('init_dlatent', default=False, help='path to init dlatent or False')
     parser.add_argument('move_to_folder', default=False, help='path to init dlatent or False')
-    parser.add_argument('--iterations', default=20, help='Number of optimization steps for each batch', type=int)
+    parser.add_argument('-it', '--iterations', default=1, help='Number of optimization steps for each batch', type=int)
     parser.add_argument('--network_pkl', default='gdrive:networks/stylegan2-ffhq-config-f.pkl', help='Path to local copy of stylegan2-ffhq-config-f.pkl')
 
     # for now it's unclear if larger batch leads to better performance/quality
@@ -71,7 +71,7 @@ def main():
         for loss in pbar:
             pbar.set_description(' '.join(names)+' Loss: %.2f' % loss)
         print(' '.join(names), ' loss:', loss)
-        shutil.move(str(args.src_dir)+"\\"+str(names[0])+r".png", str(args.move_to_folder)+"\\"+str(names[0])+r".png")
+        #shutil.move(str(args.src_dir)+"\\"+str(names[0])+r".png", str(args.move_to_folder)+"\\"+str(names[0])+r".png")
 
         # Generate images from found dlatents and save them
  
