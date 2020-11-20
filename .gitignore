@@ -6,3 +6,4 @@ outputVideo/
 .stylegan2-cache/
 __pycache__/
 .vs/
+.DS_Store
