@@ -1,4 +1,4 @@
-#FOLLOW THIS LINK TO GOOGLE COLAB NOTEBOOK WITH INSTRUCTIONS: https://colab.research.google.com/drive/1bneTg2exC-ckKF0pNbP-C-7sYbrd1HYW?usp=sharing
+# FOLLOW THIS LINK TO GOOGLE COLAB NOTEBOOK WITH INSTRUCTIONS: https://colab.research.google.com/drive/1bneTg2exC-ckKF0pNbP-C-7sYbrd1HYW?usp=sharing
 
 
 # GAN inversion for video manipulation
