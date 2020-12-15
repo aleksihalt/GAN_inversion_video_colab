@@ -1,3 +1,6 @@
+# FOLLOW THIS LINK TO GOOGLE COLAB NOTEBOOK WITH INSTRUCTIONS: https://colab.research.google.com/drive/1bneTg2exC-ckKF0pNbP-C-7sYbrd1HYW?usp=sharing
+
+
 # GAN inversion for video manipulation
 This repository is a hacked version of https://github.com/rolux/stylegan2encoder. To map images into latent space please refer to the aforementioned repository.
 
