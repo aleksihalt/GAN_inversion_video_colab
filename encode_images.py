@@ -73,7 +73,7 @@ def main():
             pbar.set_description(' '.join(names)+' Loss: %.2f' % loss)
         print(' '.join(names), ' loss:', loss)
         #commented out for colab
-        #shutil.move(str(args.src_dir)+"\\"+str(names[0])+r".png", str(args.move_to_folder)+"\\"+str(names[0])+r".png")
+        shutil.move(str(args.src_dir)+str(names[0])+r".png", str(args.move_to_folder)+str(names[0])+r".png")
 
         # Generate images from found dlatents and save them
  
