@@ -16,15 +16,15 @@ def main():
 
     ims=[]
     for i in range(100000,(100000+int(args.number_of_frames)+1)):
-    my_file = Path(str(args.frame_dir)+str(i)+r".png")
-    if my_file.is_file():
-        im = Image.open(str(args.frame_dir)+str(i)+r".png")
-        ima = np.array(im)
-        ims.append(ima)
-        print(i)
-        im.close()
-    else:
-        pass
+        my_file = Path(str(args.frame_dir)+str(i)+r".png")
+        if my_file.is_file():
+            im = Image.open(str(args.frame_dir)+str(i)+r".png")
+            ima = np.array(im)
+            ims.append(ima)
+            print(i)
+            im.close()
+        else:
+            pass
     imageio.mimwrite(str(args.saved_video_file), ims , fps = 30)
 
 if __name__ == "__main__":
