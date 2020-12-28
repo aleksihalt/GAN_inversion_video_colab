@@ -25,6 +25,8 @@ def main():
     parser.add_argument('init_dlatent', default=False, help='path to init dlatent or False')
     parser.add_argument('move_to_folder', default=False, help='path to init dlatent or False')
     parser.add_argument('-it', '--iterations', default=10, help='Number of optimization steps for each batch', type=int)
+    parser.add_argument('reset', default='0', help='same dlatent for every frame', type=int)
+
     parser.add_argument('--network_pkl', default='gdrive:networks/stylegan2-ffhq-config-f.pkl', help='Path to local copy of stylegan2-ffhq-config-f.pkl')
 
     # for now it's unclear if larger batch leads to better performance/quality
@@ -85,7 +87,10 @@ def main():
             np.save(os.path.join(args.dlatent_dir, f'{img_name}.npy'), dlatent)
 
         #finally OPTIONAL step: reset dlatent to original reference dlatent
-        #generator.define_dlatents(args.init_dlatent)
+        if args.reset == 1:
+            generator.define_dlatents(args.init_dlatent)
+        else:
+            pass
        
 
 
